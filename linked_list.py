@@ -1,5 +1,23 @@
 """
 This module contains series of python implementations of linked list.
+There's a interesting problem:
+
+Example 1:
+>>> a = 1
+>>> b = 2
+>>> a, b = None, a
+>>> print(a, b)
+None 1
+
+Example 2:
+>>> a, b = None, a
+NameError: name 'e' is not defined
+>>> a = 1
+>>> b = a
+>>> print(a, b)
+1 1
+
+conclusion: The UNPACK operation is different from variable reference.
 
 """
 
@@ -49,23 +67,6 @@ class SinglyLinkedList:
                 while current_node.next.next:
                     current_node = current_node.next
                 
-                # There's a interesting problem:
-                #
-                # Example 1:
-                # >>> a = 1
-                # >>> b = 2
-                # >>> a, b = None, a
-                # >>> print(a, b)
-                # None 1
-                #
-                # Example 2:
-                # >>> a, b = None, a
-                # NameError: name 'e' is not defined
-                # >>> a = 1
-                # >>> b = a
-                # >>> print(a, b)
-                # 1 1
-                # The UNPACK operation is different from variable reference
                 current_node.next, current_node = None, current_node.next
             else:
                 self.head = None
