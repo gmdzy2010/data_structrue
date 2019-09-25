@@ -12,6 +12,7 @@ None 1
 Example 2:
 >>> a, b = None, a
 NameError: name 'e' is not defined
+
 >>> a = 1
 >>> b = a
 >>> print(a, b)
@@ -84,3 +85,32 @@ class SinglyLinkedList:
             current_node = next_node
             
         self.head = previous_node
+
+
+class DoubleLinkedListNode:
+    """The unit of double linked list."""
+    
+    def __init__(self, data):
+        self.previous_node = None
+        self.next_node = None
+        self.data = data
+
+
+class DoubleLinkedList:
+    """double linked list."""
+    
+    def __init__(self):
+        self.head = None
+        self.tail = None
+    
+    def insert_head(self, data):
+        pass
+    
+    def insert_tail(self, data):
+        pass
+    
+    def delete_head(self, data):
+        pass
+    
+    def delete_tail(self, data):
+        pass
